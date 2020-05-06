@@ -1,0 +1,33 @@
+How was this site built?
+
+This site was built using the tutorial for django: https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+
+The first thing I did was run:
+
+django-admin startproject NASApy
+
+now, although the tutorial does not say it, we need to create a virtual environment:
+
+python3 -m venv NASA
+
+now, activate the new virtual environment:
+
+source NASA/bin/activate
+
+(or on windows)
+NASA\Scripts\activate.bat
+
+now, I changed directories to the NASApy project, and started a new app:
+
+cd NASApy
+python manage.py startapp NASA_api
+
+I followed the tutorial to build a view. After that, I need to make sure my virtual environment downloads the proper packages.
+
+So far, all I need it django. So I created a requirements.txt file, which just contains the django version I want.
+
+Then I installed the packages using the command: pip3 install -r requirements.txt
+
+Lastly, I started the project with the commmand: python manage.py runserver
+
+My site is running at http://127.0.0.1:8000/nasa/ and if I go to that url in my browser, I see my site.
